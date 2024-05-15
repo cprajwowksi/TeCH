@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  db:
+    ports:
+      - "${MONGO_HOST_PORT}:27017"
+    networks:
+      - net_A
+    image: mongo:${MONGO_VERSION}
+    volumes:
+      - bazamongo:/data/db
+
+  server:
+    image: node:latest
+    working_dir: /app  
+    ports:
+      - "3003:3003"
+    networks:
+      - net_A
+    depends_on:
+      - db
+    command: bash -c "npm install express mongodb && node index.js"
+    volumes:
+      - .:/app # Poprawiono ścieżkę montowania, poprzednia była niepoprawna.
+
+networks:
+  net_A:
+    external: false
+    name: net_A
+
+volumes:
+  bazamongo:

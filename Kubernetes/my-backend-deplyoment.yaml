@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mybackendlb-deployment
+  labels:
+    app: myapp
+    type: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+      type: backend
+  template:
+    metadata:
+      name: mybackendlb-pod
+      labels:
+        app: myapp
+        type: backend
+    spec:
+      containers:
+        - name: mybackendlb-container
+          image: kubaen/mybackenlb

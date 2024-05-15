@@ -1,0 +1,14 @@
+{
+  "name": "moja-aplikacja",
+  "version": "1.0.0",
+  "description": "Opis Twojej aplikacji",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Twoje imię lub nazwa organizacji",
+  "license": "Licencja Twojej aplikacji",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
