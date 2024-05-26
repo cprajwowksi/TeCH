@@ -9,7 +9,7 @@ services:
     image: mongo:4.1.13
     volumes:
       - bazamongo:/data/db
-
+    command: ['mongo'
 networks:
   net_A:
     name: net_A

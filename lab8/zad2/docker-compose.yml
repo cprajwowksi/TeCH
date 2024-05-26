@@ -1,0 +1,23 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    ports:
+    -  "6379:6379"
+    networks:
+    -  net_zad2
+    container_name: redis
+
+  myapp:
+    build: .
+    ports:
+    -  "3000:3000"
+    depends_on:
+    -  redis
+    networks:
+    -  net_zad2
+
+networks:
+  net_zad2:
+    external: false
+    name: net_zad2
