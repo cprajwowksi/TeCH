@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-helloworld
+spec:
+  containers:
+    - name: my-helloworld
+      image: cprajwowski/zad-lab9:v2
+      ports:
+        - containerPort: 80

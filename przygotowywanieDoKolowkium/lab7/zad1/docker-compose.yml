@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    container_name: db
+    networks:
+      - net_A
+    ports:
+      - "27019:27017"
+    image: mongo:4.1.13
+    volumes:
+      - bazamongo:/data/db
+
+networks:
+  net_A:
+    name: net_A
+    external: false
+
+volumes:
+  bazamongo:
