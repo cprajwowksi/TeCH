@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mikroserwis-a
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: mikroserwis-a
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mikroserwis-a
-        image: cprajwowski/lab10-zad1-mikroserwis_a:v2
+        image: cprajwowski/lab10-zad2-mikroserwis_a
         ports:
         - containerPort: 3000
 
