@@ -22,7 +22,7 @@ app.get('/', async (req,res) => {
 	} catch (err) {
 		console.error('Error connecting to the database:', err);
 	}
-  	
+
 });
 
 
