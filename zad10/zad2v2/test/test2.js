@@ -2,6 +2,7 @@ const { MongoClient } = require('mongodb');
 
 const uri = 'mongodb://localhost:31549';
 
+
 const client = new MongoClient(uri);
 
 async function main() {
