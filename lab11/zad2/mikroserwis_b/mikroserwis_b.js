@@ -5,7 +5,7 @@ const username = process.env.MONGO_INITDB_ROOT_USERNAME;
 const password = process.env.MONGO_INITDB_ROOT_PASSWORD;
 const database_url = process.env.ME_CONFIG_MONGODB_SERVER;
 
-const uri = `mongodb://${username}:${password}@${database_url}:27017`;
+const uri = `mongodb://${username}:${password}@my-mongo-service:27017`;
 
 const client = new MongoClient(uri);
 
